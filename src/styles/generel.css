@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  margin: auto 0;
+  background-color: var(--black_90);
+}
+
+/* VARIABLER */
+html {
+  --font1: "Stick No Bills", sans-serif;
+  --font2: "Lato", sans-serif;
+  --gradientRegnbue: linear-gradient(90deg, #e501d5 0%, #ff6b00 28.5%, #fff500 36%, #65e501 76.5%, #08f7fe 99.99%);
+  --gradientLys: linear-gradient(90deg, #ffd7fc 0%, #ffdfc8 28.5%, #fffdc5 36%, #ddffc3 76.5%, #defeff 99.99%);
+  --white_100: #ffffff;
+  --black_90: #080808;
+  --graa_200: #2f2f2f;
+  --graa_100: #c9c9c9;
+}
+
+/* FONTS */
+@font-face {
+  font-family: "digitalnumbers";
+  src: url("digital-7-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+h1,
+h2 {
+  font-family: var(--font1);
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 120px;
+  word-wrap: break-word;
+  background-image: var(--gradientRegnbue);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+}
+h1 {
+  font-size: 128px;
+}
+h2 {
+  font-size: 101px;
+}
+h3 {
+  font-family: var(--font1);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 90px;
+  line-height: 120px;
+  word-wrap: break-word;
+  color: var(--white_100);
+}
+h4,
+h5 {
+  color: var(--white_100);
+  font-family: var(--font2);
+  text-align: center;
+  line-height: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+h4 {
+  font-size: 40px;
+}
+h5 {
+  font-size: 38px;
+}
+p {
+  font-family: var(--font2);
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 34.6px;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 62px;
+  }
+  h2 {
+    font-size: 62px;
+  }
+  h3 {
+    font-size: 90px;
+  }
+  h4 {
+    font-size: 25px;
+  }
+}
+/* .stick-no-bills {
+  font-family: "Stick No Bills", sans-serif;
+  /* font-optical-sizing: auto; */
+/* font-weight: 500;
+  font-style: normal; */
