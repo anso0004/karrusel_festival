@@ -6,6 +6,7 @@ import "../styles/generel.css";
 import ArtistButton from "../components/ArtistButton.astro";
 import ArtistInfo from "../components/ArtistInfo.astro";
 import SpotifyList from "../components/SpotifyList.astro";
+import DemoButton from "../components/DemoButton.astro";
 ---
 
 <html lang="en">
@@ -24,6 +25,7 @@ import SpotifyList from "../components/SpotifyList.astro";
     <main>
       <slot />
     </main>
+    <DemoButton variant="primary">LÆS MERE</DemoButton>
     <SpotifyList variant="1" />
     <SpotifyList variant="2" />
     <SpotifyList variant="3" />

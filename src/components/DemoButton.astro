@@ -1,0 +1,42 @@
+---
+const { variant } = Astro.props;
+---
+
+<button class={variant}>
+  <p>LÆS MERE</p>
+  <img class="icon" src="public/bulletpoints_icons/calender.svg" alt="" />
+</button>
+
+<style>
+  button {
+    text-align: center;
+    display: inline-flex;
+    padding: 6px 28px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 50px;
+    display: flex;
+    gap: 61px;
+  }
+  p {
+    line-height: 0;
+  }
+
+  :hover.primary {
+    border: 3px solid yellow;
+  }
+
+  .primary {
+    color: white;
+    background-color: black;
+    border: 3px dashed yellow;
+  }
+
+  .icon {
+    width: 15%;
+    height: 100%;
+  }
+</style>
