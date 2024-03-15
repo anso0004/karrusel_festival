@@ -1,16 +1,38 @@
 ---
-const { number } = Astro.props;
+const { variant } = Astro.props;
 ---
 
 <section>
-  <p class={number}>1</p>
-  <p class="song">hej</p>
-  <p class="artist">Halløj</p>
+  <div class="left">
+    <p class={variant}>1</p>
+    <div>
+      <p class="song">hej</p>
+      <p class="artist">Halløj</p>
+    </div>
+  </div>
   <p class="time">8:00</p>
 </section>
 
 <style>
   section {
     display: flex;
+    justify-content: space-between;
+    max-width: 794px;
+  }
+
+  .left {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 50%;
+  }
+
+  p {
+    font-size: 15px;
+    margin: 0;
+    line-height: 18px;
+  }
+
+  .artist {
+    font-size: 10px;
   }
 </style>
