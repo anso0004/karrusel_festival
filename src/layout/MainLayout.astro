@@ -3,6 +3,7 @@ const { title } = Astro.props;
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/generel.css";
+import ArtistButton from "../components/ArtistButton.astro";
 ---
 
 <html lang="en">
@@ -21,6 +22,9 @@ import "../styles/generel.css";
     <main>
       <slot />
     </main>
+    <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+    <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+    <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
     <Footer />
   </body>
 </html>

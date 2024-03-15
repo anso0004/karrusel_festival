@@ -1,0 +1,27 @@
+---
+const { variant } = Astro.props;
+---
+
+<h2 class="artist_button">ARTIST KUNSTER</h2>
+<h2 class="artist_button">ARTIST</h2>
+
+<style>
+  .artist_button {
+    background-color: black;
+    padding: 17px 28px;
+    color: white;
+    /* border: 3px dashed yellow; */
+    border: 3px dashed var(--Gradient-Regnbue, #e501d5);
+    text-align: center;
+    display: inline-flex;
+    padding: 17px 28px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  :hover.artist_button {
+    /* border: 3px solid yellow; */
+    border: 3px solid var(--Gradient-Regnbue, #e501d5);
+  }
+</style>
