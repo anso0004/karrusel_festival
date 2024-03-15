@@ -77,6 +77,8 @@ h5 {
 h6 {
   font-size: 25px;
   font-weight: 800;
+  color: var(--white_100);
+  font-family: var(--font2);
 }
 
 p {
