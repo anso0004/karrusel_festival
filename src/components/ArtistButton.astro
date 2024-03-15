@@ -1,27 +1,64 @@
 ---
-const { variant } = Astro.props;
+const { variant, size } = Astro.props;
 ---
 
-<h2 class="artist_button">ARTIST KUNSTER</h2>
-<h2 class="artist_button">ARTIST</h2>
+<button class={variant + " " + size}><slot /></button>
 
 <style>
-  .artist_button {
-    background-color: black;
-    padding: 17px 28px;
-    color: white;
-    /* border: 3px dashed yellow; */
-    border: 3px dashed var(--Gradient-Regnbue, #e501d5);
+  button {
     text-align: center;
     display: inline-flex;
     padding: 17px 28px;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
   }
 
-  :hover.artist_button {
-    /* border: 3px solid yellow; */
-    border: 3px solid var(--Gradient-Regnbue, #e501d5);
+  .primary {
+    /* background-color: transparent; */
+    /* border: 3px dashed yellow; */
+    color: white;
+    background: inherit;
+    position: relative;
+    border: none;
+    /* border: 3px dashed black; */
+    /* border: 5px dashed white; */
+
+    &::before {
+      background: linear-gradient(90deg, #e501d5 0%, #ff6b00 28.5%, #fff500 36%, #65e501 76.5%, #08f7fe 99.99%);
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+      margin: -3px;
+      right: 0;
+      top: 0;
+      content: "";
+    }
+  }
+
+  :hover.primary {
+    border: 3px solid;
+  }
+  .secondary {
+    /* background-color: transparent; */
+    border: 3px solid var(--graa_200);
+    color: white;
+    background-color: black;
+  }
+
+  :hover.secondary {
+    background-color: var(--graa_200);
+  }
+  .small {
+    font-size: 16px;
+  }
+  .medium {
+    font-size: 22px;
+  }
+  .big {
+    font-size: 30px;
   }
 </style>
