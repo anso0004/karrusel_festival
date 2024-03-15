@@ -60,29 +60,55 @@ const { variant, size } = Astro.props;
 
   .third {
     font-size: 24px;
-    padding-left: 29px;
+    /* padding-left: 29px;
     padding-right: 29px;
     padding-top: 21px;
-    padding-bottom: 21px;
-    background: black;
+    padding-bottom: 21px; */
+    /* background: black;
     border-radius: 80px;
     border: 5px dotted;
     justify-content: center;
     align-items: center;
     gap: 61px;
     color: bisque;
-    background-image: var(--gradientRegnbue);
+    background-image: var(--gradientRegnbue); */
     
-    position: relative;
+    /* position: relative;
     
     -webkit-background-clip: text;
-    -webkit-text-fill-color: #FFD7FC;
-  }
-  .third:hover{
-    border: 1.8px solid;
-    background-image: var(--gradientRegnbue);
-     -webkit-background-clip: text;
+    -webkit-text-fill-color: #FFD7FC; */ */
+
     
+    /* background-color: transparent; */
+    /* border: 3px dashed yellow; */
+    color: white;
+    background: inherit;
+    position: relative;
+    border: none;
+    background-color: var(--black_90);
+    /* border: 3px dashed black; */
+    /* border: 5px dashed white; */
+
+    
+  }
+  .third::before {
+      background: linear-gradient(90deg, #e501d5 0%, #ff6b00 28.5%, #fff500 36%, #65e501 76.5%, #08f7fe 99.99%);
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+      margin: -3px;
+      right: 0;
+      top: 0;
+      content: "";
+      border-radius: 80px;
+    }
+  .third:hover{
+    border: 1.8px solid; 
+    background-image: var(--black_90);
+    /* background-image: var(--gradientRegnbue);
+     -webkit-background-clip: text; */
+   filter: drop-shadow(0px 0px 5px yellow); 
   }
 
 </style>
