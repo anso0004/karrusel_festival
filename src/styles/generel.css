@@ -72,6 +72,13 @@ h4 {
 h5 {
   font-size: 38px;
 }
+
+/* Bullet points */
+h6 {
+  font-size: 25px;
+  font-weight: 800;
+}
+
 p {
   font-family: var(--font2);
   font-size: 23px;
