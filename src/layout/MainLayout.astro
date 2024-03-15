@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/generel.css";
 import ArtistButton from "../components/ArtistButton.astro";
+import ArtistInfo from "../components/ArtistInfo.astro";
 ---
 
 <html lang="en">
@@ -22,6 +23,7 @@ import ArtistButton from "../components/ArtistButton.astro";
     <main>
       <slot />
     </main>
+    <ArtistInfo />
     <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
     <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
     <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
