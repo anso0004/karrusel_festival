@@ -1,10 +1,9 @@
 ---
-
+const { variant } = Astro.props;
 ---
 
 <div class="flex">
-  <!-- <img src="public/bulletpoints_icons/calender.svg" alt="Icon" /> -->
-  <div id="icon_img"></div>
+  <div class={variant}></div>
   <h6>Manegen</h6>
 </div>
 
@@ -15,10 +14,43 @@
     gap: 1.5%;
   }
 
-  #icon_img {
-    background-image: url(public/bulletpoints_icons/calender.svg);
-    width: 100%;
+  .facebook,
+  .instagram,
+  .spotify,
+  .map,
+  .calender,
+  .time {
+    width: 2%;
     height: 100%;
     background-size: cover;
+    aspect-ratio: 33/35;
+  }
+
+  .facebook {
+    background-image: url(public/bulletpoints_icons/calender.svg);
+  }
+
+  .instagram {
+    background-image: url(public/bulletpoints_icons/instagram.svg);
+  }
+
+  .spotify {
+    background-image: url(public/bulletpoints_icons/spotify.svg);
+  }
+
+  .map {
+    background-image: url(public/bulletpoints_icons/map.svg);
+  }
+
+  .calender {
+    background-image: url(public/bulletpoints_icons/calender.svg);
+  }
+
+  .time {
+    background-image: url(public/bulletpoints_icons/time.svg);
+  }
+
+  h6 {
+    margin: 0;
   }
 </style>
