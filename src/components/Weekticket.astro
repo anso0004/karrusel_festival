@@ -2,11 +2,38 @@
 import "../styles/generel.css";
 const { variant, size } = Astro.props;
 ---
+
+<article>
+    <p class="dato_biletter">22/8 - 24/8 2024</p>
+    <h3>PARTOUT</h3>
+    <h6>3 days / Thursday - Saturday</h6>
+    <p>Three magical days at Karrusel Festival with house, disco and techno - Buy before 31st of July 2024.</p>
+    <h4>DKK 800,-</h4>
+    <button>Buy</button>
+</article>
+
 <style>
-    .Weekticket{
-        width: 100%; height: 100%; border: 5px #E501D5 solid;
-        color: antiquewhite;
-        font-size: 100px;
-        position: absolute;
+    article{
+        width: 347px;
+        height: auto;
+        /* border: 5px solid aliceblue; */
+    background: inherit;
+    position: relative;
+    border: none;
+    background-color: var(--black_90);
+    }
+    article::before {
+      background: var(--gradientRegnbue);
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+      margin: -3px;
+      right: 0;
+      top: 0;
+      content: "";
+    }
+    p{
+        color: var(--graa_100);
     }
 </style>
