@@ -5,7 +5,7 @@ import Footer from "../components/Footer.astro";
 import "../styles/generel.css";
 import ArtistButton from "../components/ArtistButton.astro";
 import ArtistInfo from "../components/ArtistInfo.astro";
-import ArtistIcon from "../components/ArtistIcon.astro";
+import SpotifyList from "../components/SpotifyList.astro";
 ---
 
 <html lang="en">
@@ -24,7 +24,11 @@ import ArtistIcon from "../components/ArtistIcon.astro";
     <main>
       <slot />
     </main>
-    <ArtistIcon />
+    <SpotifyList number="1" />
+    <SpotifyList number="2" />
+    <SpotifyList number="3" />
+    <SpotifyList number="4" />
+    <SpotifyList number="5" />
     <ArtistInfo variant="facebook" />
     <ArtistInfo variant="instagram" />
     <ArtistInfo variant="spotify" />
