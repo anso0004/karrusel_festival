@@ -1,19 +1,128 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
+import DemoButton from "../components/DemoButton.astro";
+import ArtistButton from "../components/ArtistButton.astro";
 ---
 
 <MainLayout title="Karrusel Festival">
-  <!-- <h1>Karrusel Festival</h1> -->
-  <img src="public/hero_img.png" alt="Herobillede" />
+  <div class="div_relative">
+    <img src="public/index/hero_img.png" alt="Herobillede" />
+  </div>
+  <div class="div_absolute">
+    <h1>Karrusel Festival</h1>
+  </div>
+  <img class="arrow" src="public/index/arrow.png" alt="Arrow" />
+  <section class="grid_2-1">
+    <p>"3 days of house,<br /> disco and techno"</p>
+    <div class="buttons">
+      <DemoButton variant="primary">LÆS MERE</DemoButton>
+      <DemoButton variant="primary">LÆS MERE</DemoButton>
+    </div>
+  </section>
+  <section class="background_artists">
+    <div id="scrollingTextContainer">
+      <div id="scrollingText">
+        <!-- <p>Din rulletekst her...</p> -->
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      </div>
+    </div>
+    <div id="scrollingTextContainer">
+      <div id="scrollingText">
+        <!-- <p>Din rulletekst her...</p> -->
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      </div>
+    </div>
+  </section>
 </MainLayout>
 
 <style>
   img {
     width: 100%;
-    position: relative;
   }
 
-  h1 {
+  .div_relative {
+    position: relative;
+  }
+  .div_absolute {
     position: absolute;
+    top: 70%;
+    /* text-align: center; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
+  }
+
+  .arrow {
+    display: block;
+    width: 27px;
+    height: 13.661px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+  }
+
+  p {
+    font-size: 74px;
+    color: var(--graa_100);
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  .grid_2-1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .buttons {
+    margin: auto 0;
+  }
+
+  #scrollingTextContainer {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Giver containeren fuld højde */
+  }
+
+  #scrollingText {
+    position: absolute;
+    top: 50%;
+    right: -100%; /* Starter uden for skærmen til højre */
+    transform: translateY(-50%);
+    transition: right 2s ease-in-out;
+  }
+
+  .background_artists {
+    margin: 10% 5% 10% 5%;
   }
 </style>
+
+<script>
+  var isScrolling = false; // Variabel til at spore om der scrolles eller ej
+
+  window.addEventListener("scroll", function () {
+    isScrolling = true; // Indstil isScrolling til true når der scrolles
+    requestAnimationFrame(function () {
+      updateTextPosition();
+    });
+  });
+
+  function updateTextPosition() {
+    if (isScrolling) {
+      var scrollingText = document.getElementById("scrollingText");
+      var scrollPosition = window.scrollY;
+
+      if (scrollPosition > 0) {
+        scrollingText.style.right = "50%"; // Flytter teksten helt til venstre side
+      } else {
+        scrollingText.style.right = "-100%"; // Ruller teksten til højre side
+      }
+
+      isScrolling = false; // Nulstil isScrolling når scrolling er stoppet
+    }
+  }
+</script>
