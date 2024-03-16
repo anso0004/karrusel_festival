@@ -1,7 +1,19 @@
 ---
-import MainLayout from "../layout/MainLayout.astro"
+import MainLayout from "../layout/MainLayout.astro";
 ---
 
 <MainLayout title="Karrusel Festival">
-	<!-- <h1>Karrusel Festival</h1> -->
+  <h1>Karrusel Festival</h1>
+  <img src="public/hero_img.png" alt="Herobillede" />
 </MainLayout>
+
+<style>
+  img {
+    width: 100%;
+    position: relative;
+  }
+
+  h1 {
+    position: absolute;
+  }
+</style>
