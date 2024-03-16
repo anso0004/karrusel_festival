@@ -1,7 +1,143 @@
 ---
-import MainLayout from "../layout/MainLayout.astro"
+import Buttons from "../components/Buttons.astro";
+import MainLayout from "../layout/MainLayout.astro";
+import DemoButton from "../components/DemoButton.astro";
+import ArtistButton from "../components/ArtistButton.astro";
 ---
 
 <MainLayout title="Lineup">
-	
+  <!-- <section class="del_1">
+    <img src="public/icon_back.svg" alt="back" />
+    <h2>Lineup</h2>
+    <DemoButton />
+  </section> -->
+
+  <section class="del_2">
+    <img src="public/icon_back.svg" alt="back" />
+    <DemoButton />
+  </section>
+  <h2>Lineup</h2>
+
+  <section class="lineup">
+    <h5>Thursday</h5>
+    <article class="day">
+      <div class="line">
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+      </div>
+      <div class="line">
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+      </div>
+      <div class="line">
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+      </div>
+      <div class="line">
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      </div>
+    </article>
+
+    <h5>Friday</h5>
+    <article class="day">
+      <div class="line">
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+      </div>
+      <div class="line">
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      </div>
+      <div class="line">
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+      </div>
+      <div class="line">
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      </div>
+    </article>
+
+    <h5>Friday</h5>
+    <article class="day">
+      <div class="line">
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      </div>
+      <div class="line">
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+      </div>
+      <div class="line">
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+      </div>
+      <div class="line">
+        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+      </div>
+    </article>
+  </section>
+
+  <style>
+    h2 {
+      text-align: center;
+      width: auto;
+    }
+    /* Styling af øverste del */
+    .del_2 {
+      display: flex;
+
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .del_1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    /* Styling af line-up */
+    h5 {
+      text-align: center;
+    }
+    .day {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      white-space: nowrap;
+      margin-bottom: 10%;
+    }
+
+    .line {
+      display: flex;
+      flex-direction: row;
+      gap: 5%;
+      /* justify-self: center; */
+      margin-bottom: 2%;
+    }
+  </style>
 </MainLayout>
