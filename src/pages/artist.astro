@@ -1,6 +1,29 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
 import Footer from "../components/Footer.astro";
+import SpotifyList from "../components/SpotifyList.astro";
+import ArtistInfo from "../components/ArtistInfo.astro";
+import Song from "../components/Song.astro";
 ---
 
-<MainLayout title="Artist" />
+<MainLayout title="Artist">
+    <img src="public/icon_back.svg" alt="Tilbage">
+    <h2>acid pauli</h2>
+    <section>
+        <img src="public/artist_img.webp" alt="Billede af kunstner">
+        <article>
+            <ArtistInfo variant="map" text="Manegen"></ArtistInfo>
+            <ArtistInfo variant="calender" text="Friday  23rd of August"></ArtistInfo>
+            <ArtistInfo variant="time" text="03:00"></ArtistInfo>
+        </article>
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus quis hic officiis mollitia repellendus, molestiae incidunt aliquam inventore magni quae ab cum, in perferendis tempora, tempore consequuntur. Corrupti, sequi vitae.</p>
+        </article>
+        <article>
+            <ArtistInfo variant="instagram" text="@therealacidpauli"></ArtistInfo>
+            <ArtistInfo variant="spotify" text="Acid Pauli"></ArtistInfo>
+            <ArtistInfo variant="facebook" text="Acid Pauli"></ArtistInfo>
+        </article>
+    </section>
+    <SpotifyList></SpotifyList>
+</MainLayout>

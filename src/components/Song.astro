@@ -1,0 +1,38 @@
+---
+const { variant,song,artist,time } = Astro.props;
+---
+
+<section>
+  <div class="left">
+    <p>{variant}</p>
+    <div>
+      <p>{song}</p>
+      <p>{artist}</p>
+    </div>
+  </div>
+  <p>{time}</p>
+</section>
+
+<style>
+  section {
+    display: flex;
+    justify-content: space-between;
+    max-width: 794px;
+  }
+
+  .left {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 50%;
+  }
+
+  p {
+    font-size: 15px;
+    margin: 0;
+    line-height: 18px;
+  }
+
+  .artist {
+    font-size: 10px;
+  }
+</style>

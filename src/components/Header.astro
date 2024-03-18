@@ -2,6 +2,168 @@
 
 ---
 
+<header>
+      <div class="logo_header">
+        <a href="/src/pages/index">
+          <img src="public/Logo_hvid.svg" alt="logo" />
+          <p>22/8 - 24/8 2024</p>
+        </a>
+      </div>
+      <div class="nedtælling">
+        <p>80.32.73.02</p>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="/tickets">BUY TICKETS</a></li>
+          <li><a href="/lineup">LINEUP</a></li>
+          <li><a href="#">PROGRAM</a></li>
+          <li><a href="#">FESTIVAL MAP</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    </header>
+
+<style>
+  .nedtælling p{
+    font-family: "digitalnumbers";
+    font-size: 36px;
+    tex
+  }
+  .logo_header p{
+    font-size: 19px;
+  }
+
+  @media (max-width: 800px){
+    .nedtælling{
+      display: none;
+    }
+  }
+
+    header {
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  /* background-color: var(--lysgrøn); */
+  position: sticky;
+}
+header a {
+  text-decoration: none;
+  font-size: 75px;
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+.menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+.menu a {
+  font-family: var(--font1);
+  font-weight: 600;
+  color: var(--white_100);
+  /* background-color: var(--lysgul); */
+  margin-right: 60px;
+  padding: 10px 30px 10px 30px;
+  border-radius: 6px;
+}
+.logo_header a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.logo_header img {
+  width: 30%;
+}
+.logo_header p {
+  font-family: var(--font2);
+  /* color: var(--mørkgrøn); */
+}
+
+.burger {
+  width: 48px;
+  height: 20px;
+  cursor: pointer;
+  margin-right: 16px;
+}
+.burger .line {
+  width: 100%;
+  height: 4px;
+  background-color: var(--white_100);
+  margin-bottom: 4px;
+  transition: 0.2s linear;
+  border-radius: 5px;
+}
+.burger {
+  display: none;
+}
+nav li {
+  margin: 0;
+  padding: 0;
+}
+
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+  nav.active .menu {
+    display: block;
+    background-color: var(--black_90);
+    position: absolute;
+    left: 0;
+    top: 75px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  nav.active .menu li {
+    margin-left: 20px;
+    margin-top: 8px;
+    padding-top: 10px;
+  }
+
+</style>
+
+<script>
+    const burger = document.querySelector(".burger");
+const nav = document.querySelector("nav");
+const menu = document.querySelector(".menu");
+const links = document.querySelectorAll(".menu li a");
+
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  nav.classList.toggle("active");
+});
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    burger.classList.remove("active");
+    nav.classList.remove("active");
+  });
+});
+
+</script>
 <!-- Slettes når header er kodet færdig -->
 <nav>
     <a href="/lineup">Lineup</a>
