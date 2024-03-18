@@ -19,110 +19,159 @@ import ArtistButton from "../components/ArtistButton.astro";
       <DemoButton variant="primary">LÆS MERE</DemoButton>
     </div>
   </section>
-  <section class="background_artists">
-    <div id="scrollingTextContainer">
-      <div id="scrollingText">
-        <!-- <p>Din rulletekst her...</p> -->
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-      </div>
+  <section class="artist_scroll">
+    <div class="artist_line1">
+      <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+      <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+      <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
     </div>
-    <div id="scrollingTextContainer">
-      <div id="scrollingText">
-        <!-- <p>Din rulletekst her...</p> -->
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-      </div>
+    <div class="artist_line2">
+      <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+      <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+    </div>
+    <div class="artist_line3">
+      <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+      <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+    </div>
+    <div class="artist_line4">
+      <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+      <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+      <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
     </div>
   </section>
-</MainLayout>
+  <section class="buttons_2">
+    <DemoButton variant="primary">LÆS MERE</DemoButton>
+    <DemoButton variant="primary">LÆS MERE</DemoButton>
+  </section>
 
-<style>
-  img {
-    width: 100%;
-  }
+  <style>
+    img {
+      width: 100%;
+    }
 
-  .div_relative {
-    position: relative;
-  }
-  .div_absolute {
-    position: absolute;
-    top: 70%;
-    /* text-align: center; */
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
-    /* display: block;
-    margin-left: auto;
-    margin-right: auto; */
-  }
+    .div_relative {
+      position: relative;
+    }
 
-  .arrow {
-    display: block;
-    width: 27px;
-    height: 13.661px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1%;
-  }
+    .div_absolute {
+      position: absolute;
+      top: 70%;
+    }
 
-  p {
-    font-size: 74px;
-    color: var(--graa_100);
-    line-height: normal;
-    text-transform: uppercase;
-  }
+    .arrow {
+      display: block;
+      width: 27px;
+      height: 13.661px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1%;
+    }
 
-  .grid_2-1 {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    max-width: 80%;
-    margin: 0 auto;
-  }
+    p {
+      font-size: 74px;
+      color: var(--graa_100);
+      line-height: normal;
+      text-transform: uppercase;
+    }
+    .grid_2-1 {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      max-width: 80%;
+      margin: 8% auto;
+    }
 
-  .buttons {
-    margin: auto 0;
-  }
+    .buttons {
+      margin: 61px 0;
+      gap: 23%;
+      display: grid;
+      width: 267px;
+    }
 
-  #scrollingTextContainer {
-    position: relative;
-    width: 100%;
-    height: 100%; /* Giver containeren fuld højde */
-  }
+    .artist_scroll {
+      max-width: 80%;
+      margin: 0 auto;
+    }
 
-  #scrollingText {
-    position: absolute;
-    top: 50%;
-    right: -100%; /* Starter uden for skærmen til højre */
-    transform: translateY(-50%);
-    transition: right 2s ease-in-out;
-  }
+    .artist_line1 {
+      margin: 3% 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 8%;
+    }
 
-  .background_artists {
-    margin: 10% 5% 10% 5%;
-  }
-</style>
+    .artist_line2 {
+      margin: 3cqmin 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 8%;
+    }
 
-<script>
-  var isScrolling = false; // Variabel til at spore om der scrolles eller ej
+    .artist_line3 {
+      margin: 3% 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 8%;
+    }
 
-  window.addEventListener("scroll", function () {
-    isScrolling = true; // Indstil isScrolling til true når der scrolles
-    requestAnimationFrame(function () {
-      updateTextPosition();
-    });
-  });
+    .artist_line4 {
+      margin: 3% 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 8%;
+    }
 
-  function updateTextPosition() {
-    if (isScrolling) {
-      var scrollingText = document.getElementById("scrollingText");
-      var scrollPosition = window.scrollY;
+    .buttons_2 {
+      display: flex;
+      justify-content: center;
+      gap: 5%;
+      margin: 6% 0 10% 0;
+    }
 
-      if (scrollPosition > 0) {
-        scrollingText.style.right = "50%"; // Flytter teksten helt til venstre side
-      } else {
-        scrollingText.style.right = "-100%"; // Ruller teksten til højre side
+    @media (max-width: 800px) {
+      .div_absolute {
+        position: absolute;
+        top: 10%;
+        line-height: 52px;
+      }
+      .arrow {
+        display: none;
       }
 
-      isScrolling = false; // Nulstil isScrolling når scrolling er stoppet
+      p {
+        font-size: 36px;
+        color: var(--graa_100);
+        line-height: normal;
+        text-transform: uppercase;
+        width: 347px;
+      }
+
+      .grid_2-1 {
+        /* display: grid;
+      grid-template-columns: 2fr 1fr; */
+        display: block;
+        max-width: 80%;
+        margin: 12% auto;
+      }
+
+      .buttons {
+        margin: 61px auto 100px auto;
+      }
+
+      .buttons_2 {
+        display: grid;
+        gap: 20%;
+        margin-top: 60px;
+      }
     }
-  }
-</script>
+  </style>
+</MainLayout>
