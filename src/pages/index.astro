@@ -2,6 +2,7 @@
 import MainLayout from "../layout/MainLayout.astro";
 import DemoButton from "../components/DemoButton.astro";
 import ArtistButton from "../components/ArtistButton.astro";
+import CountDown from "../components/CountDown.astro";
 ---
 
 <MainLayout title="Karrusel Festival">
@@ -15,8 +16,12 @@ import ArtistButton from "../components/ArtistButton.astro";
   <section class="grid_2-1">
     <p>"3 days of house,<br /> disco and techno"</p>
     <div class="buttons">
-      <DemoButton variant="primary">LÆS MERE</DemoButton>
-      <DemoButton variant="primary">LÆS MERE</DemoButton>
+      <a href="/tickets">
+        <DemoButton variant="primary">LÆS MERE</DemoButton>
+      </a>
+      <a href="/">
+        <DemoButton variant="primary">LÆS MERE</DemoButton>
+      </a>
     </div>
   </section>
   <section class="artist_scroll">
@@ -64,9 +69,14 @@ import ArtistButton from "../components/ArtistButton.astro";
     </div>
   </section>
   <section class="buttons_2">
-    <DemoButton variant="primary">LÆS MERE</DemoButton>
-    <DemoButton variant="primary">LÆS MERE</DemoButton>
+    <a href="/lineup">
+      <DemoButton variant="primary">LÆS MERE</DemoButton>
+    </a>
+    <a href="/">
+      <DemoButton variant="primary">LÆS MERE</DemoButton>
+    </a>
   </section>
+  <CountDown />
 
   <style>
     img {
@@ -79,13 +89,9 @@ import ArtistButton from "../components/ArtistButton.astro";
 
     .div_absolute {
       position: absolute;
-      top: 70%;
+      top: 85%;
       white-space: nowrap;
     }
-
-    /* h1 {
-      width: auto;
-    } */
 
     .arrow {
       display: block;
@@ -168,7 +174,7 @@ import ArtistButton from "../components/ArtistButton.astro";
     @media (max-width: 800px) {
       .div_absolute {
         position: absolute;
-        top: 19%;
+        top: 29%;
         line-height: 52px;
       }
       .arrow {

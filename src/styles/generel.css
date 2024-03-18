@@ -98,6 +98,10 @@ p {
   color: var(--white_100);
 }
 
+a {
+  text-decoration: none;
+}
+
 @media (max-width: 800px) {
   h1 {
     font-size: 62px;
