@@ -1,12 +1,22 @@
 ---
-import MainLayout from "../layout/MainLayout.astro"
-import Dayticket from "../components/Dayticket.astro"
-import Weekticket from "../components/Weekticket.astro"
+import MainLayout from "../layout/MainLayout.astro";
+import Dayticket from "../components/Dayticket.astro";
+import Weekticket from "../components/Weekticket.astro";
 ---
 
 <MainLayout title="Tickets">
-	<Weekticket></Weekticket>
-    <Dayticket></Dayticket>
-    <Dayticket></Dayticket>
-    <Dayticket></Dayticket>
+  <Weekticket />
+  <article class="daytickets">
+    <Dayticket dato="22/8 2024" header="1 day / Thursday" />
+    <Dayticket dato="23/8 2024" header="1 day / Friday" />
+    <Dayticket dato="24/8 2024" header="1 day / Saturday" />
+  </article>
 </MainLayout>
+
+<style>
+  .daytickets {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+  }
+</style>
