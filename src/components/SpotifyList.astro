@@ -1,38 +1,22 @@
 ---
-const { variant } = Astro.props;
+import Song from "./Song.astro";
+const {song,artist,time}=Astro.props
 ---
 
-<section>
-  <div class="left">
-    <p class={variant}>1</p>
+<article>
+  <div>
     <div>
-      <p class="song">hej</p>
-      <p class="artist">Halløj</p>
+    <img src="public/artist_img.webp" alt="Spotify coverbillede">
+    <p>Acid Pauli</p>
+    <p>Top Tracks</p>
     </div>
+    <img src="public/bulletpoints_icons/spotify.svg" alt="Link til Spotify">
   </div>
-  <p class="time">8:00</p>
-</section>
-
-<style>
-  section {
-    display: flex;
-    justify-content: space-between;
-    max-width: 794px;
-  }
-
-  .left {
-    display: flex;
-    /* justify-content: space-between; */
-    gap: 50%;
-  }
-
-  p {
-    font-size: 15px;
-    margin: 0;
-    line-height: 18px;
-  }
-
-  .artist {
-    font-size: 10px;
-  }
-</style>
+  <div>
+<Song song="The end" artist="Acid Pauli" time="8:13" variant="1"></Song>
+<Song song="Ahmed" artist="Acid Pauli" time="6:48" variant="2"></Song>
+<Song song="New Morning" artist="Acid Pauli" time="7:48" variant="3"></Song>
+<Song song="Who Loves The Sun" artist="Acid Pauli feat Jo.Ke - Acid Pauli Let It Be Naked Remix Edit" time="3:50" variant="4"></Song>
+<Song song="Good Morning" artist="Acid Pauli" time="6:02" variant="5"></Song>
+</div>
+</article>
