@@ -1,0 +1,47 @@
+---
+export async function getStaticPaths() {
+    const data = await fetch("https://offwlbqmmcpglquiaelv.supabase.co/rest/v1/kunstner_navn", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9mZndsYnFtbWNwZ2xxdWlhZWx2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA1MDQ2NTcsImV4cCI6MjAyNjA4MDY1N30.16mlR9loC7mnmsLf3LTf1IJKwPcBMZTsOtpE9mLcWxY"
+  },
+}).then(response => response.json());
+
+    return data.map((artist) => {
+        return{
+            params: { slug: artist.slug },
+            props: { myData:artist },
+        };
+    });
+}
+const { myData } = Astro.props;
+console.log(myData);
+
+import MainLayout from "../layout/MainLayout.astro";
+import Footer from "../components/Footer.astro";
+import SpotifyList from "../components/SpotifyList.astro";
+import ArtistInfo from "../components/ArtistInfo.astro";
+import Song from "../components/Song.astro";
+---
+
+<MainLayout title={myData.name}>
+    <img src="public/icon_back.svg" alt="Tilbage">
+    <h2>{myData.name}</h2>
+    <section>
+        <img src={myData.img} alt="Billede af kunstner">
+        <article>
+            <ArtistInfo variant="map" text={myData.map}></ArtistInfo>
+            <ArtistInfo variant="calender" text={myData.calendar}></ArtistInfo>
+            <ArtistInfo variant="time" text={myData.time}></ArtistInfo>
+        </article>
+        <article>
+            <p>{myData.description}</p>
+        </article>
+        <article>
+            <ArtistInfo variant="instagram" text={myData.instagram}></ArtistInfo>
+            <ArtistInfo variant="spotify" text={myData.spotify}></ArtistInfo>
+            <ArtistInfo variant="facebook" text={myData.facebook}></ArtistInfo>
+        </article>
+    </section>
+    <SpotifyList></SpotifyList>
+</MainLayout>
