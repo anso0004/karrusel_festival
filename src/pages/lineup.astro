@@ -2,7 +2,22 @@
 import MainLayout from "../layout/MainLayout.astro";
 import DemoButton from "../components/DemoButton.astro";
 import ArtistButton from "../components/ArtistButton.astro";
+
+const data = await fetch("https://offwlbqmmcpglquiaelv.supabase.co/rest/v1/kunstner_navn",{
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9mZndsYnFtbWNwZ2xxdWlhZWx2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA1MDQ2NTcsImV4cCI6MjAyNjA4MDY1N30.16mlR9loC7mnmsLf3LTf1IJKwPcBMZTsOtpE9mLcWxY"
+  },
+}).then(res=>res.json());
+
+
 ---
+
+
+
+
+
+
 
 <MainLayout title="Lineup">
   <section class="del_1">
@@ -16,7 +31,12 @@ import ArtistButton from "../components/ArtistButton.astro";
   <section class="lineup">
     <h5>Thursday</h5>
     <article class="day">
-      <div class="line">
+      {
+        data.map((artist) =>{
+          return <ArtistButton data={artist} />;
+        })
+      }
+      <!-- <div class="line">
         <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
         <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
         <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
@@ -38,7 +58,7 @@ import ArtistButton from "../components/ArtistButton.astro";
         <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
         <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
         <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-      </div>
+      </div> -->
     </article>
 
     <h5>Friday</h5>
