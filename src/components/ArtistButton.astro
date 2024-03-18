@@ -1,8 +1,12 @@
 ---
 const { variant, size } = Astro.props;
+const {data}=Astro.props;
+console.log(data);
 ---
 
-<button class={variant + " " + size}><slot /></button>
+<button class={variant + " " + size}>
+<p>{data.Name}</p>
+</button>
 
 <style>
   button {
