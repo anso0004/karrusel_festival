@@ -1,9 +1,9 @@
 ---
-const { variant } = Astro.props;
+const { variant, tekst } = Astro.props;
 ---
 
 <button class={variant}>
-  <p>LÆS MERE</p>
+  <p>{tekst}</p>
   <img class="icon" src="public/bulletpoints_icons/calender.svg" alt="" />
 </button>
 
