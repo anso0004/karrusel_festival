@@ -45,6 +45,24 @@ import ArtistButton from "../components/ArtistButton.astro";
       <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
     </div>
   </section>
+  <section class="artist_scroll_mobile">
+    <div class="artist_line1">
+      <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+      <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+    </div>
+    <div class="artist_line2">
+      <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+    </div>
+    <div class="artist_line3">
+      <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+    </div>
+    <div class="artist_line4">
+      <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+      <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+    </div>
+  </section>
   <section class="buttons_2">
     <DemoButton variant="primary">LÆS MERE</DemoButton>
     <DemoButton variant="primary">LÆS MERE</DemoButton>
@@ -62,7 +80,12 @@ import ArtistButton from "../components/ArtistButton.astro";
     .div_absolute {
       position: absolute;
       top: 70%;
+      white-space: nowrap;
     }
+
+    /* h1 {
+      width: auto;
+    } */
 
     .arrow {
       display: block;
@@ -96,6 +119,7 @@ import ArtistButton from "../components/ArtistButton.astro";
     .artist_scroll {
       max-width: 80%;
       margin: 0 auto;
+      white-space: nowrap;
     }
 
     .artist_line1 {
@@ -137,10 +161,14 @@ import ArtistButton from "../components/ArtistButton.astro";
       margin: 6% 0 10% 0;
     }
 
+    .artist_scroll_mobile {
+      display: none;
+    }
+
     @media (max-width: 800px) {
       .div_absolute {
         position: absolute;
-        top: 10%;
+        top: 19%;
         line-height: 52px;
       }
       .arrow {
@@ -153,6 +181,7 @@ import ArtistButton from "../components/ArtistButton.astro";
         line-height: normal;
         text-transform: uppercase;
         width: 347px;
+        white-space: nowrap;
       }
 
       .grid_2-1 {
@@ -171,6 +200,47 @@ import ArtistButton from "../components/ArtistButton.astro";
         display: grid;
         gap: 20%;
         margin-top: 60px;
+      }
+
+      .artist_scroll {
+        display: none;
+      }
+
+      .artist_scroll_mobile {
+        display: grid;
+        white-space: nowrap;
+      }
+
+      .artist_line1 {
+        margin: 3% 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 8%;
+      }
+
+      .artist_line2 {
+        margin: 3cqmin 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 8%;
+      }
+
+      .artist_line3 {
+        margin: 3% 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 8%;
+      }
+
+      .artist_line4 {
+        margin: 3% 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 8%;
       }
     }
   </style>
