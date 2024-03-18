@@ -1,18 +1,11 @@
 ---
-import Buttons from "../components/Buttons.astro";
 import MainLayout from "../layout/MainLayout.astro";
 import DemoButton from "../components/DemoButton.astro";
 import ArtistButton from "../components/ArtistButton.astro";
 ---
 
 <MainLayout title="Lineup">
-  <!-- <section class="del_1">
-    <img src="public/icon_back.svg" alt="back" />
-    <h2>Lineup</h2>
-    <DemoButton />
-  </section> -->
-
-  <section class="del_2">
+  <section class="del_1">
     <a href="/">
       <img src="public/icon_back.svg" alt="back" />
     </a>
@@ -104,42 +97,182 @@ import ArtistButton from "../components/ArtistButton.astro";
     </article>
   </section>
 
-  <style>
-    h2 {
-      text-align: center;
-      width: auto;
-    }
-    /* Styling af øverste del */
-    .del_2 {
-      display: flex;
+  <section class="mobile_lineup">
+    <h5>Thursday</h5>
+    <article class="mobile_day">
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      </div>
+    </article>
 
-      flex-direction: row;
-      justify-content: space-between;
+    <h5>Friday</h5>
+    <article class="mobile_day">
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      </div>
+    </article>
+
+    <h5>Saturday</h5>
+    <article class="mobile_day">
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      </div>
+      <div class="mobile_line">
+        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+      </div>
+    </article>
+  </section>
+</MainLayout>
+
+<style>
+  h2 {
+    text-align: center;
+    width: auto;
+  }
+  /* Styling af øverste del */
+  .del_1 {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* Styling af line-up */
+  h5 {
+    text-align: center;
+  }
+  .day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: nowrap;
+    margin-bottom: 10%;
+  }
+
+  .line {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    /* justify-self: center; */
+    margin-bottom: 2%;
+  }
+
+  @media (min-width: 800px) {
+    .mobile_day,
+    .mobile_line,
+    .mobile_lineup {
+      display: none;
     }
-    .del_1 {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+  }
+
+  @media (max-width: 800px) {
+    .day,
+    .line,
+    .lineup {
+      display: none;
     }
 
-    /* Styling af line-up */
-    h5 {
-      text-align: center;
-    }
-    .day {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      white-space: nowrap;
-      margin-bottom: 10%;
-    }
-
-    .line {
+    .mobile_line {
       display: flex;
       flex-direction: row;
       gap: 5%;
       /* justify-self: center; */
       margin-bottom: 2%;
     }
-  </style>
-</MainLayout>
+
+    .mobile_day {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      white-space: nowrap;
+      margin-bottom: 10%;
+    }
+  }
+</style>
