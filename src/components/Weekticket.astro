@@ -1,39 +1,112 @@
 ---
 import "../styles/generel.css";
 const { variant, size } = Astro.props;
+import "../components/ArtistButton.astro";
+import DemoButton from "./DemoButton.astro";
 ---
 
 <article>
+  <div>
     <p class="dato_biletter">22/8 - 24/8 2024</p>
     <h3>PARTOUT</h3>
     <h6>3 days / Thursday - Saturday</h6>
     <p>Three magical days at Karrusel Festival with house, disco and techno - Buy before 31st of July 2024.</p>
+  </div>
+  <div class="right">
     <h4>DKK 800,-</h4>
-    <button>Buy</button>
+    <DemoButton variant="primary">Buy</DemoButton>
+  </div>
 </article>
 
 <style>
-    article{
-        width: 347px;
-        height: auto;
-        /* border: 5px solid aliceblue; */
+  article {
+    /* border: 5px solid aliceblue; */
     background: inherit;
     position: relative;
     border: none;
     background-color: var(--black_90);
+    
+  }
+  article::before {
+    background: var(--gradientRegnbue);
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    margin: -3px;
+    right: 0;
+    top: 0;
+    content: "";
+  }
+  p {
+    color: var(--graa_100);
+    padding-bottom: 3rem;
+  }
+   h3,
+    h6,
+    p,
+    h4,
+    button {
+      margin-left: 20px;
+      margin-bottom: 0;
+      margin-top: 1rem;
+      word-wrap: break-word;
+      
     }
-    article::before {
-      background: var(--gradientRegnbue);
-      position: absolute;
-      z-index: -1;
-      bottom: 0;
-      left: 0;
-      margin: -3px;
-      right: 0;
-      top: 0;
-      content: "";
+
+  /* Mobil */
+  @media (max-width: 800px) {
+    article {
+      margin: auto;
+      width: 347px;
+      height: auto;
     }
-    p{
-        color: var(--graa_100);
+    h3,
+    h6,
+    p,
+    h4,
+    button {
+      margin-left: 20px;
+      margin-bottom: 0;
+      margin-top: 1rem;
+      word-wrap: break-word;
+      margin-right: 15px;
     }
+    h3 {
+      margin-top: 15px;
+    }
+    .dato_biletter {
+      padding-top: 27px;
+    }
+    h6,
+    p {
+      margin-top: 12px;
+    }
+    h4 {
+      margin-top: 25px;
+    }
+    .primary {
+      margin-bottom: 10px;
+    }
+  }
+  @media (min-width: 800px) {
+    article {
+      margin: auto;
+      width: 1099px;
+      height: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    h3,
+    h6,
+    p,
+    h4,
+    button {
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+    .right {
+      margin: auto;
+    }
+  }
 </style>

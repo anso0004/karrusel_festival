@@ -1,0 +1,80 @@
+---
+import "../styles/generel.css";
+const { dato, header } = Astro.props;
+import "../components/ArtistButton.astro";
+import DemoButton from "./DemoButton.astro";
+---
+
+<article>
+  <slot> <!-- Gør det muligt at ændre indholdet i komponenterne (vha constanten oppe i fences) -->
+    <p class="dato_biletter">{dato}</p>
+    <h3>TICKET</h3>
+    <h6>{header}</h6>
+    <p>A one day ticket to Karrusel Festival with House, Techno & Disco - Buy before 31st of July 2024.</p>
+    <h4>DKK 500,-</h4>
+  </slot>
+  <DemoButton variant="primary">Buy</DemoButton>
+</article>
+
+<style>
+  article {
+    width: 347px;
+    height: auto;
+    /* border: 5px solid aliceblue; */
+    background: inherit;
+    position: relative;
+    border: none;
+    background-color: var(--black_90);
+  }
+  article::before {
+    background: var(--graa_200);
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    margin: -3px;
+    right: 0;
+    top: 0;
+    content: "";
+  }
+  p {
+    color: var(--graa_100);
+  }
+   
+
+  /* Mobil */
+  @media (max-width: 800px) {
+    article {
+      margin: auto;
+    }
+    h3,
+    h6,
+    p,
+    h4,
+    button {
+      margin-left: 20px;
+      margin-bottom: 0;
+      margin-top: 1rem;
+      word-wrap: break-word;
+      margin-right: 15px;
+    }
+    h3 {
+      margin-top: 15px;
+    }
+    .dato_biletter {
+      padding-top: 27px;
+    }
+    h6,
+    p {
+      margin-top: 12px;
+    }
+    h4 {
+      margin-top: 25px;
+    }
+    .primary {
+      margin-bottom: 10px;
+    }
+   
+  }
+   
+</style>
