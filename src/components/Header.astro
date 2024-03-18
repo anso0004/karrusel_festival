@@ -4,7 +4,7 @@
 
 <header>
       <div class="logo_header">
-        <a href="/src/pages/index">
+        <a href="/">
           <img src="public/Logo_hvid.svg" alt="logo" />
           <p>22/8 - 24/8 2024</p>
         </a>
@@ -129,12 +129,13 @@ nav li {
   }
   nav.active .menu {
     display: block;
-    background-color: var(--black_90);
+    background-color: red;
+    /* background-image: var(--black_90); */
     position: absolute;
     left: 0;
     top: 75px;
     width: 100%;
-    height: 100%;
+    height: 500%;
     z-index: 1;
   }
   nav.active .menu li {
@@ -164,11 +165,3 @@ links.forEach((link) => {
 });
 
 </script>
-<!-- Slettes når header er kodet færdig -->
-<nav>
-    <a href="/lineup">Lineup</a>
-    <a href="/artist">Artist</a>
-    <a href="/tickets">Tickets</a>
-    <a href="/">Forside</a>
-    <a href="/knap_test">knap_test</a>
-</nav>
