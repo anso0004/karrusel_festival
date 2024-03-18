@@ -1,5 +1,4 @@
 ---
-import Buttons from "../components/Buttons.astro";
 import MainLayout from "../layout/MainLayout.astro";
 import DemoButton from "../components/DemoButton.astro";
 import ArtistButton from "../components/ArtistButton.astro";
@@ -210,33 +209,57 @@ import ArtistButton from "../components/ArtistButton.astro";
       </div>
     </article>
   </section>
+</MainLayout>
 
-  <style>
-    h2 {
-      text-align: center;
-      width: auto;
-    }
-    /* Styling af øverste del */
-    .del_1 {
-      display: flex;
+<style>
+  h2 {
+    text-align: center;
+    width: auto;
+  }
+  /* Styling af øverste del */
+  .del_1 {
+    display: flex;
 
-      flex-direction: row;
-      justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* Styling af line-up */
+  h5 {
+    text-align: center;
+  }
+  .day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: nowrap;
+    margin-bottom: 10%;
+  }
+
+  .line {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    /* justify-self: center; */
+    margin-bottom: 2%;
+  }
+
+  @media (min-width: 800px) {
+    .mobile_day,
+    .mobile_line,
+    .mobile_lineup {
+      display: none;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .day,
+    .line,
+    .lineup {
+      display: none;
     }
 
-    /* Styling af line-up */
-    h5 {
-      text-align: center;
-    }
-    .day {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      white-space: nowrap;
-      margin-bottom: 10%;
-    }
-
-    .line {
+    .mobile_line {
       display: flex;
       flex-direction: row;
       gap: 5%;
@@ -244,36 +267,12 @@ import ArtistButton from "../components/ArtistButton.astro";
       margin-bottom: 2%;
     }
 
-    @media (min-width: 800px) {
-      .mobile_day,
-      .mobile_line,
-      .mobile_lineup {
-        display: none;
-      }
+    .mobile_day {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      white-space: nowrap;
+      margin-bottom: 10%;
     }
-
-    @media (max-width: 800px) {
-      .day,
-      .line,
-      .lineup {
-        display: none;
-      }
-
-      .mobile_line {
-        display: flex;
-        flex-direction: row;
-        gap: 5%;
-        /* justify-self: center; */
-        margin-bottom: 2%;
-      }
-
-      .mobile_day {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        white-space: nowrap;
-        margin-bottom: 10%;
-      }
-    }
-  </style>
-</MainLayout>
+  }
+</style>
