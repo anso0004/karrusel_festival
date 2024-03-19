@@ -27,8 +27,8 @@ const data = await response.json();
       <div class="line">
         {
           data.map((artist, i) => {
-            if (i < 6) {
-              return <ArtistButton variant={"primary"} size={"small"} data={artist} />;
+            if (i < 4) {
+              return <ArtistButton variant={"primary"} size={"big"} data={artist} />;
             }
           })
         }
@@ -36,211 +36,180 @@ const data = await response.json();
       <div class="line">
         {
           data.map((artist, i) => {
-            if (i >= 6) {
+            if (i < 5) {
               return <ArtistButton variant={"secondary"} size={"small"} data={artist} />;
             }
           })
         }
       </div>
-      <!-- <div class="line">
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-      </div>
       <div class="line">
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
-        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+        {
+          data.map((artist, i) => {
+            if (i > 11) {
+              return <ArtistButton variant={"secondary"} size={"medium"} data={artist} />;
+            }
+          })
+        }
       </div>
-      <div class="line">
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-      </div>
-      <div class="line">
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-      </div> -->
     </article>
 
     <h5>Friday</h5>
     <article class="day">
-      <!-- 
       <div class="line">
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+        {
+          data.map((artist, i) => {
+            if (i < 4) {
+              return <ArtistButton variant={"primary"} size={"big"} data={artist} />;
+            }
+          })
+        }
       </div>
       <div class="line">
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        {
+          data.map((artist, i) => {
+            if (i < 5) {
+              return <ArtistButton variant={"secondary"} size={"small"} data={artist} />;
+            }
+          })
+        }
       </div>
       <div class="line">
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+        {
+          data.map((artist, i) => {
+            if (i > 11) {
+              return <ArtistButton variant={"secondary"} size={"medium"} data={artist} />;
+            }
+          })
+        }
       </div>
-      <div class="line">
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-      </div>
-      -->
     </article>
 
-    <h5>Friday</h5>
+    <h5>Saturday</h5>
     <article class="day">
-      <!-- 
       <div class="line">
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        {
+          data.map((artist, i) => {
+            if (i < 4) {
+              return <ArtistButton variant={"primary"} size={"big"} data={artist} />;
+            }
+          })
+        }
       </div>
       <div class="line">
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
-        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+        {
+          data.map((artist, i) => {
+            if (i < 5) {
+              return <ArtistButton variant={"secondary"} size={"small"} data={artist} />;
+            }
+          })
+        }
       </div>
       <div class="line">
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+        {
+          data.map((artist, i) => {
+            if (i > 11) {
+              return <ArtistButton variant={"secondary"} size={"medium"} data={artist} />;
+            }
+          })
+        }
       </div>
-      <div class="line">
-        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
-      </div>
-      -->
     </article>
   </section>
 
-  <!-- 
   <section class="mobile_lineup">
     <h5>Thursday</h5>
     <article class="mobile_day">
       <div class="mobile_line">
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+        {
+          data.map((artist, i) => {
+            if (i < 2) {
+              return <ArtistButton variant={"primary"} size={"big"} data={artist} />;
+            }
+          })
+        }
       </div>
       <div class="mobile_line">
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+        {
+          data.map((artist, i) => {
+            if (i < 2) {
+              return <ArtistButton variant={"secondary"} size={"big"} data={artist} />;
+            }
+          })
+        }
       </div>
       <div class="mobile_line">
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
-      </div>
-      <div class="mobile_line">
-        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
-      </div>
-      <div class="mobile_line">
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-      </div>
-      <div class="mobile_line">
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-      </div>
-      <div class="mobile_line">
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-      </div>
-      <div class="mobile_line">
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-      </div>
-      <div class="mobile_line">
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        {
+          data.map((artist, i) => {
+            if (i > 12) {
+              return <ArtistButton variant={"secondary"} size={"big"} data={artist} />;
+            }
+          })
+        }
       </div>
     </article>
 
     <h5>Friday</h5>
     <article class="mobile_day">
       <div class="mobile_line">
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+        {
+          data.map((artist, i) => {
+            if (i < 2) {
+              return <ArtistButton variant={"primary"} size={"big"} data={artist} />;
+            }
+          })
+        }
       </div>
       <div class="mobile_line">
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+        {
+          data.map((artist, i) => {
+            if (i < 2) {
+              return <ArtistButton variant={"secondary"} size={"big"} data={artist} />;
+            }
+          })
+        }
       </div>
       <div class="mobile_line">
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
-      </div>
-      <div class="mobile_line">
-        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
-      </div>
-      <div class="mobile_line">
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-      </div>
-      <div class="mobile_line">
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-      </div>
-      <div class="mobile_line">
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-      </div>
-      <div class="mobile_line">
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-      </div>
-      <div class="mobile_line">
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        {
+          data.map((artist, i) => {
+            if (i > 12) {
+              return <ArtistButton variant={"secondary"} size={"big"} data={artist} />;
+            }
+          })
+        }
       </div>
     </article>
 
     <h5>Saturday</h5>
     <article class="mobile_day">
       <div class="mobile_line">
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
+        {
+          data.map((artist, i) => {
+            if (i < 2) {
+              return <ArtistButton variant={"primary"} size={"big"} data={artist} />;
+            }
+          })
+        }
       </div>
       <div class="mobile_line">
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
+        {
+          data.map((artist, i) => {
+            if (i < 2) {
+              return <ArtistButton variant={"secondary"} size={"big"} data={artist} />;
+            }
+          })
+        }
       </div>
       <div class="mobile_line">
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
-      </div>
-      <div class="mobile_line">
-        <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
-      </div>
-      <div class="mobile_line">
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-      </div>
-      <div class="mobile_line">
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-      </div>
-      <div class="mobile_line">
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-      </div>
-      <div class="mobile_line">
-        <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-      </div>
-      <div class="mobile_line">
-        <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
+        {
+          data.map((artist, i) => {
+            if (i > 12) {
+              return <ArtistButton variant={"secondary"} size={"big"} data={artist} />;
+            }
+          })
+        }
       </div>
     </article>
   </section>
-  -->
 </MainLayout>
 
 <style>

@@ -3,6 +3,13 @@ import MainLayout from "../layout/MainLayout.astro";
 import DemoButton from "../components/DemoButton.astro";
 import ArtistButton from "../components/ArtistButton.astro";
 import CountDown from "../components/CountDown.astro";
+const response = await fetch("https://offwlbqmmcpglquiaelv.supabase.co/rest/v1/kunstner_navn", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9mZndsYnFtbWNwZ2xxdWlhZWx2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA1MDQ2NTcsImV4cCI6MjAyNjA4MDY1N30.16mlR9loC7mnmsLf3LTf1IJKwPcBMZTsOtpE9mLcWxY",
+  },
+});
+const data = await response.json();
 ---
 
 <MainLayout title="Karrusel Festival">
@@ -26,46 +33,60 @@ import CountDown from "../components/CountDown.astro";
   </section>
   <section class="artist_scroll">
     <div class="artist_line1">
-      <!-- <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-      <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-      <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-      <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-      <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton> -->
+      {
+        data.map((artist, i) => {
+          if (i < 4) {
+            return <ArtistButton variant={"primary"} size={"big"} data={artist} />;
+          }
+        })
+      }
     </div>
     <div class="artist_line2">
-      <!-- <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-      <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
-      <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-      <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton> -->
+      {
+        data.map((artist, i) => {
+          if (i < 5) {
+            return <ArtistButton variant={"secondary"} size={"small"} data={artist} />;
+          }
+        })
+      }
     </div>
     <div class="artist_line3">
-      <!-- <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-      <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-      <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
-      <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton> -->
-    </div>
-    <div class="artist_line4">
-      <!-- <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-      <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton>
-      <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton> -->
+      {
+        data.map((artist, i) => {
+          if (i > 11) {
+            return <ArtistButton variant={"secondary"} size={"medium"} data={artist} />;
+          }
+        })
+      }
     </div>
   </section>
   <section class="artist_scroll_mobile">
     <div class="artist_line1">
-      <!-- <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-      <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton> -->
+      {
+        data.map((artist, i) => {
+          if (i < 2) {
+            return <ArtistButton variant={"primary"} size={"big"} data={artist} />;
+          }
+        })
+      }
     </div>
     <div class="artist_line2">
-      <!-- <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-      <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton> -->
+      {
+        data.map((artist, i) => {
+          if (i < 2) {
+            return <ArtistButton variant={"secondary"} size={"big"} data={artist} />;
+          }
+        })
+      }
     </div>
     <div class="artist_line3">
-      <!-- <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton>
-      <ArtistButton variant="secondary" size="medium">LÆS MERE</ArtistButton> -->
-    </div>
-    <div class="artist_line4">
-      <!-- <ArtistButton variant="secondary" size="small">LÆS MERE</ArtistButton>
-      <ArtistButton variant="primary" size="big">LÆS MERE</ArtistButton> -->
+      {
+        data.map((artist, i) => {
+          if (i > 12) {
+            return <ArtistButton variant={"secondary"} size={"big"} data={artist} />;
+          }
+        })
+      }
     </div>
   </section>
   <section class="buttons_2">
@@ -90,6 +111,7 @@ import CountDown from "../components/CountDown.astro";
     .div_absolute {
       position: absolute;
       top: 85%;
+      left: 22%;
       white-space: nowrap;
     }
 
