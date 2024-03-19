@@ -14,7 +14,7 @@ import DemoButton from "./DemoButton.astro";
   </div>
   <div class="right">
     <h4>DKK 800,-</h4>
-    <DemoButton variant="primary">Buy</DemoButton>
+    <DemoButton variant="primary" tekst="Buy">Buy</DemoButton>
   </div>
 </article>
 
@@ -25,7 +25,6 @@ import DemoButton from "./DemoButton.astro";
     position: relative;
     border: none;
     background-color: var(--black_90);
-    
   }
   article::before {
     background: var(--gradientRegnbue);
@@ -42,17 +41,16 @@ import DemoButton from "./DemoButton.astro";
     color: var(--graa_100);
     padding-bottom: 3rem;
   }
-   h3,
-    h6,
-    p,
-    h4,
-    button {
-      margin-left: 20px;
-      margin-bottom: 0;
-      margin-top: 1rem;
-      word-wrap: break-word;
-      
-    }
+  h3,
+  h6,
+  p,
+  h4,
+  button {
+    margin-left: 20px;
+    margin-bottom: 0;
+    margin-top: 1rem;
+    word-wrap: break-word;
+  }
 
   /* Mobil */
   @media (max-width: 800px) {
