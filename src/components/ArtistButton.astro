@@ -1,13 +1,12 @@
 ---
-const { variant, size } = Astro.props;
-const {data}=Astro.props;
-
+const { variant, size, data } = Astro.props;
 ---
-<a href={`artist/${data.slug}`}>
+
 <button class={variant + " " + size}>
-<p>{data.name}</p>
+  <a href={`artist/${data.slug}`}>
+    <p>{data.name}</p>
+  </a>
 </button>
-</a>
 
 <style>
   button {
