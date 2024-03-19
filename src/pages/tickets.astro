@@ -5,7 +5,7 @@ import Weekticket from "../components/Weekticket.astro";
 ---
 
 <MainLayout title="Tickets">
-    <h1>TICKETS</h1>
+  <h1>TICKETS</h1>
   <Weekticket />
   <article class="daytickets">
     <Dayticket dato="22/8 2024" header="1 day / Thursday" />
@@ -15,19 +15,20 @@ import Weekticket from "../components/Weekticket.astro";
 </MainLayout>
 
 <style>
-   h1{
+  h1 {
     margin: auto;
     margin-bottom: 5rem;
- }
+  }
+
   @media (min-width: 800px) {
-  .daytickets {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: auto;
-    max-width: 71%;
-    margin-top: 3rem;
-    margin-left: 14.1rem;
-    margin-bottom: 10rem;
-     }
+    .daytickets {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin: auto;
+      max-width: 71%;
+      margin-top: 3rem;
+      margin-left: 14.1rem;
+      margin-bottom: 10rem;
+    }
   }
 </style>
