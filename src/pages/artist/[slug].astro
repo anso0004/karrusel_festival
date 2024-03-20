@@ -27,21 +27,84 @@ console.log(myData);
 <MainLayout title={myData.name}>
   <img src="/icon_back.svg" alt="Tilbage" />
   <h2>{myData.name}</h2>
-  <section>
-    <img src={myData.img} alt="Billede af kunstner" />
-    <article>
+  <section class="grid_1_1">
+    <img class="artistimg" src={myData.img} alt="Billede af kunstner" />
+    <article class="performance_info">
       <ArtistInfo variant="map" text={myData.map} />
       <ArtistInfo variant="calender" text={myData.calendar} />
       <ArtistInfo variant="time" text={myData.time} />
     </article>
-    <article>
+    <article class="artist_text">
       <p>{myData.description}</p>
     </article>
-    <article>
+  </section>
+  <section class="grid_1_1">
+    <article class="artist_info">
       <ArtistInfo variant="instagram" text={myData.instagram} />
       <ArtistInfo variant="spotify" text={myData.spotify} />
       <ArtistInfo variant="facebook" text={myData.facebook} />
     </article>
+      <div>
+        <img class="playlist_desktop" src="/playlist.webp" alt="Playliste med kunstnerens top 5 sange">
+        <img class="playlist" src="/playlist_mobile.webp" alt="Playliste med kunstnerens top 5 sange">
+      </div>
   </section>
-  <SpotifyList />
+  
+  <!-- <SpotifyList /> -->
 </MainLayout>
+
+<style>
+@media (max-width: 800px){
+.playlist_desktop{
+  display: none;
+}
+
+}
+@media (min-width: 800px){
+  h2{
+    position: absolute;
+    left: 35%;
+  }
+  .grid_1_1{
+    display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  margin-top: 87px;
+  }
+  .performance_info{
+    align-self: end;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-left: 30px;
+  }
+  .artist_text{
+    display: grid;
+  align-self: center;
+  }
+  .grid_1_1 p{
+    display: grid;
+  grid-column: 2;
+  padding-left: 30px;
+  padding-right: 30px;
+  grid-row: 2;
+  }
+  .artistimg{
+    display: grid;
+  grid-column: 1;
+  grid-row: 1/span2;
+  padding-left: 30px;
+  padding-right: 30px;
+  }
+  .playlist{
+    display: none;
+  }
+  }
+  .artist_info{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-left: 30px;
+  }
+  .playlist_desktop{
+    padding: 50px 100px 50px 50px
+  }
+</style>
