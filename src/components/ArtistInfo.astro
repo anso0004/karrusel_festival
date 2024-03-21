@@ -14,29 +14,41 @@ const { variant, text } = Astro.props;
     gap: 1.5%;
   }
 
+  h6 {
+    padding-left: 5%;
+  }
+
   .facebook,
   .instagram,
-  .spotify,
+  .spotify {
+    height: 100%;
+    background-size: cover;
+    margin-bottom: 50px;
+  }
+
   .map,
   .calender,
   .time {
-    /* width: 2%; */
     height: 100%;
     background-size: cover;
-    aspect-ratio: 33/35;
   }
 
   .facebook {
     background-image: url(/bulletpoints_icons/facebook.svg);
     aspect-ratio: 33/35;
+    width: 6%;
   }
 
   .instagram {
     background-image: url(/bulletpoints_icons/instagram.svg);
+    aspect-ratio: 35/35;
+    width: 6%;
   }
 
   .spotify {
     background-image: url(/bulletpoints_icons/spotify.svg);
+    aspect-ratio: 35/35;
+    width: 6%;
   }
 
   .map {
