@@ -1,0 +1,59 @@
+<div id="countdown">
+  <div id="days"></div>
+  <div id="hours"></div>
+  <div id="minutes"></div>
+  <div id="seconds"></div>
+</div>
+
+<style>
+  #countdown {
+    display: flex;
+    justify-content: center;
+  }
+
+  #countdown div {
+    margin: 0 10px;
+    font-size: 50px;
+    color: white;
+    font-family: "digitalnumbers";
+  }
+
+  @media (max-width: 800px) {
+    #countdown div {
+      font-size: 60px;
+      margin-top: 10%;
+    }
+  }
+</style>
+
+<script>
+  // Beregn slutdatoen (i dette tilfælde, i dag + 57 dage)
+  const endDate = new Date();
+  endDate.setDate(endDate.getDate() + 57);
+
+  // Opdaterer nedtællingen hvert sekund
+  const countdownInterval = setInterval(updateCountdown, 1000);
+
+  function updateCountdown() {
+    const now = new Date();
+    const difference = endDate - now;
+
+    if (difference <= 0) {
+      clearInterval(countdownInterval);
+      document.getElementById("countdown").innerHTML = "Countdown er færdig!";
+    } else {
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      document.getElementById("days").textContent = `${days}`;
+      document.getElementById("hours").textContent = `${hours}`;
+      document.getElementById("minutes").textContent = `${minutes}`;
+      document.getElementById("seconds").textContent = `${seconds}`;
+    }
+  }
+
+  // Kald `updateCountdown` for at starte tælleren med det samme
+  updateCountdown();
+</script>

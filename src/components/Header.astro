@@ -1,5 +1,5 @@
 ---
-
+import HeaderCountDown from "./HeaderCountDown.astro";
 ---
 
 <header>
@@ -10,7 +10,8 @@
     </a>
   </div>
   <div class="nedtælling">
-    <p>80.32.73.02</p>
+    <!-- <p>80.32.73.02</p> -->
+    <HeaderCountDown />
   </div>
   <nav>
     <ul class="menu">
@@ -28,6 +29,8 @@
 </header>
 
 <style>
+
+  CountDown{}
   .nedtælling p {
     font-family: "digitalnumbers";
     font-size: 36px;
@@ -51,6 +54,18 @@
     padding: 20px;
     /* background-color: var(--lysgrøn); */
     position: sticky;
+  }
+
+  header{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+
+  }
+
+  .burger{
+    display: flex;
+    flex-direction: row;
+    justify-self: end;
   }
   header a {
     text-decoration: none;
